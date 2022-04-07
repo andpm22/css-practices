@@ -1,0 +1,12 @@
+*{margin: 0; padding: 0; background: #02392b;}
+h1 {margin: 10vh 0; text-align: center; color: #fff;}
+.container {margin: 20vh 0 0; opacity: 0.8; background: #fff;}
+.caja {margin-left: 10px; height: 50px; background: #0e9534; margin: 20px 0; border: 5px solid #272401; animation: changingColor 8s linear infinite; display: flex; align-items: center; color: #fff;}
+.caja.first{max-width: 1000px;}
+.caja.second{max-width: 50vw;}
+.caja.third{max-width: 50%;}
+div.caja::after{counter-increment: section; content: " - " counter(section) ".";;}
+@keyframes changingColor {
+    0%{ filter: hue-rotate(0deg);}
+    100% {filter: hue-rotate(360deg);}
+}
